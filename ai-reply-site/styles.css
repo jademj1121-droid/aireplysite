@@ -1,0 +1,807 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #5B47E0;
+    --primary-dark: #4535C7;
+    --secondary-color: #F0ECFF;
+    --text-primary: #1A1B23;
+    --text-secondary: #6B7280;
+    --bg-color: #FFFFFF;
+    --bg-gray: #F9FAFB;
+    --border-color: #E5E7EB;
+    --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    color: var(--text-primary);
+    line-height: 1.6;
+    background-color: var(--bg-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 导航栏 */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-color);
+    z-index: 1000;
+}
+
+.navbar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 20px;
+    height: 70px;
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.nav-brand i {
+    font-size: 2rem;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: var(--text-primary);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: var(--primary-color);
+}
+
+.nav-cta {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.nav-cta:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: var(--text-primary);
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+/* Hero 首屏 */
+.hero {
+    padding: 120px 0 80px;
+    background: linear-gradient(135deg, var(--bg-gray) 0%, var(--bg-color) 100%);
+}
+
+.hero .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.hero-title span {
+    color: var(--primary-color);
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.btn-primary {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-primary:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background: white;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-secondary:hover {
+    background: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    width: 100%;
+}
+
+.btn-outline:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+.hero-tags {
+    display: flex;
+    gap: 1rem;
+}
+
+.tag {
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+.hero-image {
+    display: flex;
+    justify-content: center;
+}
+
+.chat-preview {
+    background: white;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: var(--card-shadow);
+    max-width: 400px;
+}
+
+.chat-bubble {
+    padding: 1rem;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    max-width: 80%;
+}
+
+.chat-bubble.left {
+    background: var(--bg-gray);
+    border-bottom-left-radius: 4px;
+}
+
+.chat-bubble.right {
+    background: var(--primary-color);
+    color: white;
+    margin-left: auto;
+    border-bottom-right-radius: 4px;
+}
+
+/* 通用部分样式 */
+section {
+    padding: 80px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+}
+
+/* 使用场景 */
+.scenarios {
+    background: var(--bg-gray);
+}
+
+.scenarios-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.scenario-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.scenario-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--card-shadow);
+}
+
+.scenario-icon {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.scenario-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.scenario-card p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+/* 功能介绍 */
+.features-steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.step {
+    text-align: center;
+}
+
+.step-number {
+    width: 60px;
+    height: 60px;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0 auto 1rem;
+}
+
+.step h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.step p {
+    color: var(--text-secondary);
+}
+
+.features-demo {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 2fr;
+    gap: 1rem;
+    align-items: center;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: var(--card-shadow);
+}
+
+.demo-input input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 0.9rem;
+}
+
+.demo-arrow {
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.demo-role select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background: white;
+}
+
+.demo-output {
+    background: var(--secondary-color);
+    padding: 0.75rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    color: var(--primary-color);
+}
+
+/* 工具亮点 */
+.highlights {
+    background: var(--bg-gray);
+}
+
+.highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.highlight-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.highlight-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--card-shadow);
+}
+
+.highlight-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.highlight-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.highlight-card p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+/* 角色展示 */
+.roles-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.role-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    transition: all 0.3s;
+    border: 2px solid transparent;
+}
+
+.role-card:hover {
+    border-color: var(--primary-color);
+    transform: translateY(-5px);
+    box-shadow: var(--card-shadow);
+}
+
+.role-avatar {
+    width: 80px;
+    height: 80px;
+    background: var(--secondary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+.role-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.role-card p {
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+}
+
+.role-example {
+    background: var(--bg-gray);
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+/* 价格 */
+.pricing {
+    background: var(--bg-gray);
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.pricing-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    position: relative;
+    transition: all 0.3s;
+}
+
+.pricing-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--card-shadow);
+}
+
+.pricing-card.recommended {
+    border: 2px solid var(--primary-color);
+    transform: scale(1.05);
+}
+
+.pricing-badge {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--primary-color);
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+.pricing-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.pricing-header h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.price {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.price span {
+    font-size: 1rem;
+    color: var(--text-secondary);
+}
+
+.pricing-features {
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+.pricing-features li {
+    padding: 0.75rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.pricing-features i {
+    font-size: 1.2rem;
+}
+
+.pricing-features .ri-check-line {
+    color: #10B981;
+}
+
+.pricing-features .ri-close-line {
+    color: #EF4444;
+}
+
+/* 用户评价 */
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.review-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: var(--card-shadow);
+}
+
+.review-stars {
+    color: #FCD34D;
+    margin-bottom: 1rem;
+}
+
+.review-content {
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    font-style: italic;
+}
+
+.review-author strong {
+    color: var(--text-primary);
+}
+
+/* FAQ */
+.faq {
+    background: var(--bg-gray);
+}
+
+.faq-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background: white;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.faq-question {
+    padding: 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+    transition: background 0.3s;
+}
+
+.faq-question:hover {
+    background: var(--bg-gray);
+}
+
+.faq-question::after {
+    content: '+';
+    position: absolute;
+    right: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    transition: transform 0.3s;
+}
+
+.faq-item.active .faq-question::after {
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.faq-answer {
+    padding: 0 1.5rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s;
+    color: var(--text-secondary);
+}
+
+.faq-item.active .faq-answer {
+    padding: 0 1.5rem 1.5rem;
+    max-height: 300px;
+}
+
+/* Footer */
+.footer {
+    background: #111827;
+    color: white;
+    padding: 60px 0 30px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr 3fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.footer-section h4 {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section a {
+    color: #9CA3AF;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section a:hover {
+    color: white;
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.footer-desc {
+    color: #9CA3AF;
+    margin-bottom: 1rem;
+}
+
+.footer-social {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer-social a {
+    width: 40px;
+    height: 40px;
+    background: #374151;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.footer-social a:hover {
+    background: var(--primary-color);
+}
+
+.footer-bottom {
+    border-top: 1px solid #374151;
+    padding-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.footer-disclaimer {
+    flex: 1;
+    color: #9CA3AF;
+    font-size: 0.9rem;
+}
+
+.footer-copyright {
+    color: #6B7280;
+    font-size: 0.9rem;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .nav-menu,
+    .nav-cta {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .hero .container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .scenarios-grid,
+    .highlights-grid,
+    .roles-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .features-steps {
+        grid-template-columns: 1fr;
+    }
+
+    .features-demo {
+        display: none;
+    }
+
+    .pricing-grid,
+    .reviews-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pricing-card.recommended {
+        transform: none;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .hero {
+        padding: 100px 0 60px;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .scenarios-grid,
+    .roles-grid {
+        grid-template-columns: 1fr;
+    }
+}

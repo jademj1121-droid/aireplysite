@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>智聊助手 - AI自动回复，解决你的聊天困扰</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <i class="ri-robot-line"></i>
+                <span>智聊助手</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#scenarios">使用场景</a></li>
+                <li><a href="#features">功能介绍</a></li>
+                <li><a href="#roles">角色风格</a></li>
+                <li><a href="#pricing">套餐价格</a></li>
+                <li><a href="#reviews">用户评价</a></li>
+            </ul>
+            <button class="nav-cta">立即体验</button>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero 首屏模块 -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    不知道怎么回消息？<br>
+                    <span>让 AI 帮你</span>
+                </h1>
+                <p class="hero-subtitle">
+                    无论是职场沟通、暧昧聊天，还是社交场合，<br>
+                    智聊助手都能帮你生成自然、高情商的回复
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn-primary">立即免费试用</button>
+                    <button class="btn-secondary">看看示例</button>
+                </div>
+                <div class="hero-tags">
+                    <span class="tag">职场沟通</span>
+                    <span class="tag">暧昧聊天</span>
+                    <span class="tag">社交救场</span>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="chat-preview">
+                    <div class="chat-bubble left">
+                        领导刚才说的话是什么意思？
+                    </div>
+                    <div class="chat-bubble right">
+                        让我帮你分析并生成合适的回复...
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 使用场景模块 -->
+    <section id="scenarios" class="scenarios">
+        <div class="container">
+            <h2 class="section-title">总有一些场景，让你不知道怎么回复</h2>
+            <div class="scenarios-grid">
+                <div class="scenario-card">
+                    <div class="scenario-icon">
+                        <i class="ri-briefcase-line"></i>
+                    </div>
+                    <h3>领导深夜发消息</h3>
+                    <p>不知道怎么回复既不会显得太积极，又不会显得不重视</p>
+                </div>
+                <div class="scenario-card">
+                    <div class="scenario-icon">
+                        <i class="ri-heart-line"></i>
+                    </div>
+                    <h3>暧昧对象突然冷淡</h3>
+                    <p>想挽回又怕显得太主动，不知道怎么打开话题</p>
+                </div>
+                <div class="scenario-card">
+                    <div class="scenario-icon">
+                        <i class="ri-customer-service-2-line"></i>
+                    </div>
+                    <h3>客户提出无理要求</h3>
+                    <p>想要委婉拒绝，又不能破坏合作关系</p>
+                </div>
+                <div class="scenario-card">
+                    <div class="scenario-icon">
+                        <i class="ri-team-line"></i>
+                    </div>
+                    <h3>同事甩锅</h3>
+                    <p>需要表明立场，但又不想把关系搞僵</p>
+                </div>
+                <div class="scenario-card">
+                    <div class="scenario-icon">
+                        <i class="ri-message-3-line"></i>
+                    </div>
+                    <h3>相亲聊天冷场</h3>
+                    <p>找不到话题，对话尴尬，不知道怎么继续</p>
+                </div>
+                <div class="scenario-card">
+                    <div class="scenario-icon">
+                        <i class="ri-user-heart-line"></i>
+                    </div>
+                    <h3>被表白不想接受</h3>
+                    <p>想要体面拒绝，不给对方难堪</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 功能介绍模块 -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">三步获得完美回复</h2>
+            <div class="features-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>输入对方消息</h3>
+                        <p>复制粘贴对方发来的内容，简单说明场景</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>选择角色风格</h3>
+                        <p>根据你想展现的形象，选择合适的聊天风格</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>获得高情商回复</h3>
+                        <p>即时生成自然、得体的回复建议</p>
+                    </div>
+                </div>
+            </div>
+            <div class="features-demo">
+                <div class="demo-input">
+                    <input type="text" placeholder="试试输入：老板说'这个方案不行，重做'" readonly>
+                </div>
+                <div class="demo-arrow">→</div>
+                <div class="demo-role">
+                    <select disabled>
+                        <option>高情商职场人</option>
+                    </select>
+                </div>
+                <div class="demo-arrow">→</div>
+                <div class="demo-output">
+                    好的老板，我马上调整。请问您觉得主要问题在哪里？我想确保修改方向是对的...
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 工具亮点模块 -->
+    <section class="highlights">
+        <div class="container">
+            <h2 class="section-title">为什么选择智聊助手</h2>
+            <div class="highlights-grid">
+                <div class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="ri-message-smile-line"></i>
+                    </div>
+                    <h3>真实语境理解</h3>
+                    <p>不只是文字翻译，真正理解上下文和潜台词</p>
+                </div>
+                <div class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="ri-heart-3-line"></i>
+                    </div>
+                    <h3>高情商表达</h3>
+                    <p>既表达真实想法，又照顾对方感受</p>
+                </div>
+                <div class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="ri-user-settings-line"></i>
+                    </div>
+                    <h3>多角色切换</h3>
+                    <p>职场、恋爱、社交，随时切换人设</p>
+                </div>
+                <div class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="ri-shield-check-line"></i>
+                    </div>
+                    <h3>隐私安全</h3>
+                    <p>不保存聊天记录，阅后即焚</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 角色风格展示模块 -->
+    <section id="roles" class="roles">
+        <div class="container">
+            <h2 class="section-title">选择合适的聊天角色</h2>
+            <div class="roles-grid">
+                <div class="role-card">
+                    <div class="role-avatar">
+                        <i class="ri-trophy-line"></i>
+                    </div>
+                    <h3>霸道总裁</h3>
+                    <p>果断、强势，但不失风度</p>
+                    <div class="role-example">
+                        "这件事我来处理，你不用担心。"
+                    </div>
+                </div>
+                <div class="role-card">
+                    <div class="role-avatar">
+                        <i class="ri-heart-add-line"></i>
+                    </div>
+                    <h3>甜妹</h3>
+                    <p>温柔、可爱，带点小调皮</p>
+                    <div class="role-example">
+                        "嗯嗯～我觉得你说得对呀！"
+                    </div>
+                </div>
+                <div class="role-card">
+                    <div class="role-avatar">
+                        <i class="ri-medal-line"></i>
+                    </div>
+                    <h3>高情商职场人</h3>
+                    <p>专业得体，滴水不漏</p>
+                    <div class="role-example">
+                        "理解您的顾虑，我们来看一下解决方案..."
+                    </div>
+                </div>
+                <div class="role-card">
+                    <div class="role-avatar">
+                        <i class="ri-fire-line"></i>
+                    </div>
+                    <h3>暧昧拉扯型</h3>
+                    <p>若即若离，保持神秘感</p>
+                    <div class="role-example">
+                        "才不是呢...不过你这么想我也没办法～"
+                    </div>
+                </div>
+                <div class="role-card">
+                    <div class="role-avatar">
+                        <i class="ri-hand-heart-line"></i>
+                    </div>
+                    <h3>体面拒绝型</h3>
+                    <p>委婉但坚定，给足台阶</p>
+                    <div class="role-example">
+                        "真的很感谢，但我可能不太适合..."
+                    </div>
+                </div>
+                <div class="role-card">
+                    <div class="role-avatar">
+                        <i class="ri-star-smile-line"></i>
+                    </div>
+                    <h3>幽默段子手</h3>
+                    <p>轻松化解尴尬，活跃气氛</p>
+                    <div class="role-example">
+                        "这个问题比我家猫还会挠人..."
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 套餐价格模块 -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <h2 class="section-title">选择适合的套餐</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>免费版</h3>
+                        <div class="price">
+                            ¥0<span>/月</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="ri-check-line"></i>每天 10 次生成</li>
+                        <li><i class="ri-check-line"></i>基础 3 个角色</li>
+                        <li><i class="ri-check-line"></i>简单场景支持</li>
+                        <li><i class="ri-close-line"></i>高级功能</li>
+                    </ul>
+                    <button class="btn-outline">立即使用</button>
+                </div>
+                <div class="pricing-card recommended">
+                    <div class="pricing-badge">推荐</div>
+                    <div class="pricing-header">
+                        <h3>高级版</h3>
+                        <div class="price">
+                            ¥29<span>/月</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="ri-check-line"></i>无限次生成</li>
+                        <li><i class="ri-check-line"></i>全部 12 个角色</li>
+                        <li><i class="ri-check-line"></i>复杂场景分析</li>
+                        <li><i class="ri-check-line"></i>语气调节</li>
+                        <li><i class="ri-check-line"></i>历史记录</li>
+                    </ul>
+                    <button class="btn-primary">立即升级</button>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>专业版</h3>
+                        <div class="price">
+                            ¥99<span>/月</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="ri-check-line"></i>高级版所有功能</li>
+                        <li><i class="ri-check-line"></i>自定义角色</li>
+                        <li><i class="ri-check-line"></i>场景深度分析</li>
+                        <li><i class="ri-check-line"></i>语音输入</li>
+                        <li><i class="ri-check-line"></i>专属客服</li>
+                    </ul>
+                    <button class="btn-outline">联系销售</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 用户好评模块 -->
+    <section id="reviews" class="reviews">
+        <div class="container">
+            <h2 class="section-title">用户真实反馈</h2>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="review-stars">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                    </div>
+                    <p class="review-content">
+                        "真的救大命了！老板半夜发消息说方案有问题，用智聊助手回复后，老板还说考虑很周到。"
+                    </p>
+                    <div class="review-author">
+                        <strong>小王，互联网运营</strong>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                    </div>
+                    <p class="review-content">
+                        "暧昧对象突然不回消息了，用'暧昧拉扯型'生成的内容，对方居然主动找我了！太神了！"
+                    </p>
+                    <div class="review-author">
+                        <strong>Amy，设计师</strong>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                    </div>
+                    <p class="review-content">
+                        "社恐必备工具！相亲时全程靠它撑着，对方还觉得我情商很高会聊天。"
+                    </p>
+                    <div class="review-author">
+                        <strong>张先生，程序员</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ 模块 -->
+    <section class="faq">
+        <div class="container">
+            <h2 class="section-title">常见问题</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        生成的回复会很像 AI 吗？
+                    </div>
+                    <div class="faq-answer">
+                        我们的 AI 经过大量真实聊天数据训练，生成的回复自然流畅，就像真人会说的话。用户反馈都说完全看不出是 AI 生成的。
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        我的聊天记录会被保存吗？
+                    </div>
+                    <div class="faq-answer">
+                        绝不会。我们采用阅后即焚机制，所有对话内容在生成后立即删除，不保留任何用户隐私数据。
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        适合正式工作场合吗？
+                    </div>
+                    <div class="faq-answer">
+                        当然。我们的"高情商职场人"角色专门为工作场景设计，生成的回复专业得体，能够应对各种职场沟通需求。
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        可以自定义回复风格吗？
+                    </div>
+                    <div class="faq-answer">
+                        专业版支持自定义角色，你可以根据个人需求创建专属的聊天风格。
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer 底部模块 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>产品</h4>
+                    <ul>
+                        <li><a href="#scenarios">使用场景</a></li>
+                        <li><a href="#features">功能介绍</a></li>
+                        <li><a href="#roles">角色风格</a></li>
+                        <li><a href="#pricing">价格方案</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>支持</h4>
+                    <ul>
+                        <li><a href="#">帮助中心</a></li>
+                        <li><a href="#">联系我们</a></li>
+                        <li><a href="#">用户反馈</a></li>
+                        <li><a href="#">API 文档</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>法律</h4>
+                    <ul>
+                        <li><a href="#">用户协议</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                        <li><a href="#">免责声明</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <i class="ri-robot-line"></i>
+                        <span>智聊助手</span>
+                    </div>
+                    <p class="footer-desc">
+                        AI 驱动的智能回复助手，让你的每一次对话都恰到好处。
+                    </p>
+                    <div class="footer-social">
+                        <a href="#"><i class="ri-wechat-line"></i></a>
+                        <a href="#"><i class="ri-weibo-line"></i></a>
+                        <a href="#"><i class="ri-github-line"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-disclaimer">
+                    <strong>免责声明：</strong>本工具生成的内容仅供参考，使用者需自行承担沟通后果。请理性使用，勿用于违法违规用途。
+                </div>
+                <div class="footer-copyright">
+                    © 2024 智聊助手. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
